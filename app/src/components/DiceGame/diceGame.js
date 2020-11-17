@@ -2,8 +2,11 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 
 
-class Dice extends React.Component {
+class DiceGame extends React.Component {
     state = {
+        godPowers: {
+
+        },
         playerOne: {
             diceSet: {
                 diceOne: ['axe', 'arrowEX', 'stealEX', 'helmet', 'shield', 'axe'],
@@ -13,7 +16,10 @@ class Dice extends React.Component {
                 diceFive: ['stealEx', 'helmetEX', 'shield', 'arrow', 'axe', 'axe'],
                 diceSix: ['shieldEX', 'arrowEX', 'steal', 'helmet', 'axe', 'axe']
             },
-            decidingCup: []
+            decidingCup: [],
+            healthPoints: 0,
+            selectedPowers: [],
+            isFirst: false
         },
         playerTwo: {
             diceSet: {
@@ -24,7 +30,10 @@ class Dice extends React.Component {
                 diceFive: ['stealEx', 'helmetEX', 'shield', 'arrow', 'axe', 'axe'],
                 diceSix: ['shieldEX', 'arrowEX', 'steal', 'helmet', 'axe', 'axe']
             },
-            decidingCup: []
+            decidingCup: [],
+            healthPoints: 0,
+            selectedPowers: [],
+            isFirst: false
         }
     };
     rollDicePOne = e => {
@@ -57,4 +66,4 @@ class Dice extends React.Component {
     };
 };
 
-export default Dice;
+export default DiceGame;
