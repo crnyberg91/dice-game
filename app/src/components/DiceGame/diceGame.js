@@ -1,5 +1,7 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
+import GameBoard from '../Gameboard/gameboard';
+import '../../App.css';
 
 
 class DiceGame extends React.Component {
@@ -54,13 +56,53 @@ class DiceGame extends React.Component {
         console.log("P2 DICE Five: " + this.state.playerTwo.diceSet.diceFive[Math.floor(Math.random() * this.state.playerTwo.diceSet.diceFive.length)])
         console.log("P2 DICE Six: " + this.state.playerTwo.diceSet.diceSix[Math.floor(Math.random() * this.state.playerTwo.diceSet.diceSix.length)])
     };
-    
+
     render() {
         return (
-            <Container>
+            <Container className='dice-game'>
+                <div className='opponent-side-powers'>opponent powers</div>
+                <div className='opponent-side-cup'>
+                    oppCup
+                </div>
+                <div className='opponent-side-health-points'>
+                    oppHP
+                </div>
+                <div className='empty-space'>emptyspace</div>
+                <div className='opponent-roll-btn'>opponent rollbutton</div>
+                <div className='empty-space2'>empty-space2</div>
+                <div className='opponent-meter'>opponent meter</div>
+                <div className='opponent-selected-dice-cup'>opponent selected Dice</div>
+                <div className='empty-space3'>emptyspace3</div>
+                <div className='opponent-coin'>opponent coin</div>
+                <div className='empty-space4'>emptySpace4</div>
+                <div className='opponent-attack-row'>opponent attack row</div>
+                <div className='player-attack-row'>player attack row</div>
+                <div className='empty-space5'>emptyspace5</div>
+                <div className='player-selected-dice'>player selected dice</div>
+                <div className='empty-space6'>empty-space6</div>
+                <div className='player-coin'>player coin</div>
+                <div className='empty-space7'>empty space7</div>
+                <div className='player-roll-btn'>player rollbutton</div>
+                <div className='empty-space8'>empty space8</div>
+                <div className='player-meter'>player meter</div>
+                {/* <div className='empty-space9'>empty space9</div> */}
+                <div className='player-side-health-points'>player HP</div>
+                <div className='player-side-cup'>player side cup</div>
+                <div className='player-side-powers'>powers</div>
+                {/* <div className='player-side'>
+                <div className='health-points'>
+                    Health points
+                </div>
+                <div className='cup'>
+                    dice
+                </div>
+                <div className='god-powers'>
+                    God Powers
+                </div>
+                </div> */}
+                {/* <GameBoard/>
                 <button onClick={this.rollDicePOne}>CLICK TO ROLL Player One</button>
-                <br/>
-                <button onClick={this.rollDicePTwo}>CLICK TO ROLL Player Two</button>
+                <button onClick={this.rollDicePTwo}>CLICK TO ROLL Player Two</button> */}
             </Container>
         );
     };
