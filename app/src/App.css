@@ -1,38 +1,117 @@
-.App {
+body {
+  overflow: hidden;
+}
+
+.opponent-side-health-points{ grid-area: oppHP;}
+.opponent-side-cup{grid-area: oppCup;}
+.opponent-side-powers{grid-area: oppPowers;}
+.empty-space{grid-area: emptySpace;}
+.opponent-roll-btn{grid-area: oppRollBtn;}
+.empty-space2{grid-area: emptySpaceTwo;}
+.opponent-meter{grid-area: oppMeter;}
+.opponent-selected-dice-cup{grid-area: oppSelDice;}
+.empty-space3{grid-area: emptySpaceThree;}
+.opponent-coin{grid-area: oppCoin;}
+.empty-space4{grid-area: emptySpaceFour;}
+.opponent-attack-row{grid-area: oppAttackRow;}
+.player-attack-row{grid-area: playerAttackRow;}
+.empty-space5{grid-area: emptySpaceFive;}
+.player-selected-dice{grid-area: playerSelDice;}
+.empty-space6{grid-area: emptySpaceSix;}
+.player-coin{grid-area: playerCoin;}
+.empty-space7{grid-area: emptySpaceSeven;}
+.player-roll-btn{grid-area: playerRollBtn;}
+.empty-space8{grid-area: emptySpaceEight;}
+.player-meter{grid-area: playerMeter;}
+.empty-space9{grid-area: emptySpaceNine;}
+.player-side-health-points{grid-area: playerHP;}
+.player-side-cup{grid-area: playerCup;}
+.player-side-powers{grid-area: playerPowers;}
+
+
+.dice-game{
+  /* 11 columns */
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
+  grid-template-areas: 
+  'oppPowers oppPowers oppPowers oppCup oppCup oppCup oppCup oppCup oppCup oppHP oppHP'
+  'oppPowers oppPowers oppPowers oppCup oppCup oppCup oppCup oppCup oppCup oppHP oppHP'
+  'emptySpace emptySpace emptySpace emptySpace oppRollBtn oppRollBtn oppRollBtn emptySpaceTwo emptySpaceTwo oppMeter oppMeter'
+  'oppSelDice oppSelDice oppSelDice oppSelDice oppSelDice emptySpaceThree emptySpaceThree emptySpaceThree emptySpaceThree oppCoin oppCoin'
+  'emptySpaceFour emptySpaceFour emptySpaceFour emptySpaceFour emptySpaceFour emptySpaceFour emptySpaceFour emptySpaceFour emptySpaceFour emptySpaceFour emptySpaceFour'
+  'oppAttackRow oppAttackRow oppAttackRow oppAttackRow oppAttackRow oppAttackRow oppAttackRow oppAttackRow oppAttackRow oppAttackRow oppAttackRow'
+  'playerAttackRow playerAttackRow playerAttackRow playerAttackRow playerAttackRow playerAttackRow playerAttackRow playerAttackRow playerAttackRow playerAttackRow playerAttackRow'
+  'emptySpaceFive emptySpaceFive emptySpaceFive emptySpaceFive emptySpaceFive emptySpaceFive emptySpaceFive emptySpaceFive emptySpaceFive emptySpaceFive emptySpaceFive'
+  'playerCoin playerCoin emptySpaceSix emptySpaceSix emptySpaceSix emptySpaceSix playerSelDice playerSelDice playerSelDice playerSelDice playerSelDice'
+  'emptySpaceSeven emptySpaceSeven emptySpaceSeven emptySpaceSeven playerRollBtn playerRollBtn playerRollBtn emptySpaceEight emptySpaceEight playerMeter playerMeter'
+  'playerHP playerHp playerCup playerCup playerCup playerCup playerCup playerCup playerPowers playerPowers playerPowers'
+  'playerHP playerHp playerCup playerCup playerCup playerCup playerCup playerCup playerPowers playerPowers playerPowers';
+
+  padding: 10px;
+  grid-gap: 1rem;
+	margin: 4rem auto; 
+  width: 50rem;
+	height: 38rem; 
+  background: white;
   text-align: center;
+	border: 2px solid grey;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* .dice-game {
+  background-color: blue;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 40rem;
+  height: 40rem;
+  margin: 2rem;
+  align-content: center;
+} */
+
+ /* .opponent-side{
+  background-color: rgb(192, 92, 79);
+  width: 100%;
+  height: 50%;
+} */
+
+
+/* .player-side{
+  background-color: rgb(116, 15, 65);
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-self: flex-end;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.App-link {
-  color: #61dafb;
+.health-points {
+  background-color: red;
+  align-self: flex-end;
+  width: 5rem;
+  height: 5rem;
+  margin-left: 4rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cup {
+  background-color: green;
+  align-self: flex-end;
+  width: 15rem;
+  height: 5rem;
+  margin-left: 2rem;
 }
+
+.god-powers {
+  background-color: grey;
+  align-self: flex-end;
+  width: 10rem;
+  height: 5rem;
+  margin-left: 2rem;
+} */
+
+/* .gameboard {
+  display: grid;
+  background-color: red;
+  width: 90%;
+  height: 90%;
+} */
