@@ -1,117 +1,296 @@
 body {
   overflow: hidden;
+  font-family: 'Press Start 2P', cursive;
+  text-decoration: none;
+  font-size: .45rem;
 }
 
-.opponent-side-health-points{ grid-area: oppHP;}
-.opponent-side-cup{grid-area: oppCup;}
-.opponent-side-powers{grid-area: oppPowers;}
-.empty-space{grid-area: emptySpace;}
-.opponent-roll-btn{grid-area: oppRollBtn;}
-.empty-space2{grid-area: emptySpaceTwo;}
-.opponent-meter{grid-area: oppMeter;}
-.opponent-selected-dice-cup{grid-area: oppSelDice;}
-.empty-space3{grid-area: emptySpaceThree;}
-.opponent-coin{grid-area: oppCoin;}
-.empty-space4{grid-area: emptySpaceFour;}
-.opponent-attack-row{grid-area: oppAttackRow;}
-.player-attack-row{grid-area: playerAttackRow;}
-.empty-space5{grid-area: emptySpaceFive;}
-.player-selected-dice{grid-area: playerSelDice;}
-.empty-space6{grid-area: emptySpaceSix;}
-.player-coin{grid-area: playerCoin;}
-.empty-space7{grid-area: emptySpaceSeven;}
-.player-roll-btn{grid-area: playerRollBtn;}
-.empty-space8{grid-area: emptySpaceEight;}
-.player-meter{grid-area: playerMeter;}
-.empty-space9{grid-area: emptySpaceNine;}
-.player-side-health-points{grid-area: playerHP;}
-.player-side-cup{grid-area: playerCup;}
-.player-side-powers{grid-area: playerPowers;}
+#oppDice1 {
+  grid-area: oppDice1;
+}
+
+#oppDice2 {
+  grid-area: oppDice2;
+}
+
+#oppDice3 {
+  grid-area: oppDice3;
+}
+
+#oppDice4 {
+  grid-area: oppDice4;
+}
+
+#oppDice5 {
+  grid-area: oppDice5;
+}
+
+#oppDice6 {
+  grid-area: oppDice6;
+}
+
+#playerDice1 {
+  grid-area: playerDice1;
+}
+#playerDice2 {
+  grid-area: playerDice2;
+}
+#playerDice3 {
+  grid-area: playerDice3;
+}
+#playerDice4 {
+  grid-area: playerDice4;
+}
+#playerDice5 {
+  grid-area: playerDice5;
+}
+#playerDice6 {
+  grid-area: playerDice6;
+}
+
+#playerSelDice1{
+  grid-area: playerSelDice1;
+}
+#playerSelDice2{
+  grid-area: playerSelDice2;
+}
+#playerSelDice3{
+  grid-area: playerSelDice3;
+}
+#playerSelDice4{
+  grid-area: playerSelDice4;
+}
+#playerSelDice5{
+  grid-area: playerSelDice5;
+}
+#playerSelDice6{
+  grid-area: playerSelDice6;
+}
+
+#oppSelDice1 {
+  grid-area: oppSelDice1;
+}
+
+#oppSelDice2 {
+  grid-area: oppSelDice2;
+}
+
+#oppSelDice3 {
+  grid-area: oppSelDice3;
+}
+
+#oppSelDice4 {
+  grid-area: oppSelDice4;
+}
+
+#oppSelDice5 {
+  grid-area: oppSelDice5;
+}
+
+#oppSelDice6 {
+  grid-area: oppSelDice6;
+}
+
+#oppPower1 {
+  grid-area: oppPower1;
+}
+#oppPower2 {
+  grid-area: oppPower2;
+}
+#oppPower3 {
+  grid-area: oppPower3;
+}
+#playerPower1{
+  grid-area: playerPower1;
+}
+#playerPower2{
+  grid-area: playerPower2;
+}
+#playerPower3{
+  grid-area: playerPower3;
+}
 
 
-.dice-game{
+.dice {
+  border: 0.02rem solid black;  
+  padding: .02rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: whitesmoke;
+  /* font-size: .4rem; */
+  box-shadow: .3rem .15rem grey;
+}
+
+.power{
+  border: 0.04rem solid black;
+  margin: .02rem;
+  height: 100%;
+  background-color: whitesmoke;
+}
+
+.opponent-side-health-points {
+  grid-area: oppHPContainer;
+}
+
+.health-pool{
+  border: .05rem solid black;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  background-color: rgb(170, 16, 16);
+}
+
+.opponent-side-cup {
+  grid-area: oppCup;
+  display: grid;
+  padding: 1rem;
+  align-items: center;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-areas: 'oppDice1 oppDice2 oppDice3 oppDice4 oppDice5 oppDice6';
+}
+
+.opponent-side-powers {
+  grid-area: oppPowers;
+  display: grid;
+  padding: .5rem;
+  grid-template-columns: auto auto auto;
+  grid-template-areas: 'oppPower1 oppPower2 oppPower3';
+}
+
+.empty-space {
+  grid-area: emptySpace;
+}
+
+.opponent-roll-btn {
+  grid-area: oppRollBtn;
+}
+
+.empty-space2 {
+  grid-area: emptySpaceTwo;
+}
+
+.opponent-meter {
+  grid-area: oppMeter;
+}
+
+.meter-bar{
+  background-color: white;
+  height: 100%;
+  border: .05rem solid black;
+}
+
+.opponent-selected-dice-cup {
+  grid-area: oppSelDice;
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: auto auto auto;
+  grid-template-areas: 'oppSelDice1 oppSelDice2 oppSelDice3' 'oppSelDice4 oppSelDice5 oppSelDice6';
+}
+
+.empty-space3 {
+  grid-area: emptySpaceThree;
+}
+
+#oppCoin {
+  grid-area: oppCoin;
+}
+
+.empty-space4 {
+  grid-area: emptySpaceFour;
+}
+
+#oppAtkRow {
+  grid-area: oppAttackRow;
+}
+
+#playerAtkRow {
+  grid-area: playerAttackRow;
+}
+
+.empty-space5 {
+  grid-area: emptySpaceFive;
+}
+
+.player-selected-dice {
+  grid-area: playerSelDice;
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: auto auto auto;
+  grid-template-areas: 'playerSelDice1 playerSelDice2 playerSelDice3' 'playerSelDice4 playerSelDice5 playerSelDice6';
+}
+
+.empty-space6 {
+  grid-area: emptySpaceSix;
+}
+
+#playerCoin {
+  grid-area: playerCoin;
+}
+
+.empty-space7 {
+  grid-area: emptySpaceSeven;
+}
+
+.player-roll-btn {
+  grid-area: playerRollBtn;
+}
+
+.empty-space8 {
+  grid-area: emptySpaceEight;
+}
+
+.player-meter {
+  grid-area: playerMeter;
+}
+
+.empty-space9 {
+  grid-area: emptySpaceNine;
+}
+
+.player-side-health-points {
+  grid-area: playerHP;
+}
+
+.player-side-cup {
+  grid-area: playerCup;
+  display: grid;
+  padding: 1rem;
+  align-items: center;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-areas: 'playerDice1 playerDice2 playerDice3 playerDice4 playerDice5 playerDice6';
+}
+
+.player-side-powers {
+  grid-area: playerPowers;
+  display: grid;
+  padding: .5rem;
+  grid-template-columns: auto auto auto;
+  grid-template-areas: 'playerPower1 playerPower2 playerPower3';
+}
+
+
+.dice-game {
   /* 11 columns */
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
-  grid-template-areas: 
-  'oppPowers oppPowers oppPowers oppCup oppCup oppCup oppCup oppCup oppCup oppHP oppHP'
-  'oppPowers oppPowers oppPowers oppCup oppCup oppCup oppCup oppCup oppCup oppHP oppHP'
-  'emptySpace emptySpace emptySpace emptySpace oppRollBtn oppRollBtn oppRollBtn emptySpaceTwo emptySpaceTwo oppMeter oppMeter'
-  'oppSelDice oppSelDice oppSelDice oppSelDice oppSelDice emptySpaceThree emptySpaceThree emptySpaceThree emptySpaceThree oppCoin oppCoin'
-  'emptySpaceFour emptySpaceFour emptySpaceFour emptySpaceFour emptySpaceFour emptySpaceFour emptySpaceFour emptySpaceFour emptySpaceFour emptySpaceFour emptySpaceFour'
-  'oppAttackRow oppAttackRow oppAttackRow oppAttackRow oppAttackRow oppAttackRow oppAttackRow oppAttackRow oppAttackRow oppAttackRow oppAttackRow'
-  'playerAttackRow playerAttackRow playerAttackRow playerAttackRow playerAttackRow playerAttackRow playerAttackRow playerAttackRow playerAttackRow playerAttackRow playerAttackRow'
-  'emptySpaceFive emptySpaceFive emptySpaceFive emptySpaceFive emptySpaceFive emptySpaceFive emptySpaceFive emptySpaceFive emptySpaceFive emptySpaceFive emptySpaceFive'
-  'playerCoin playerCoin emptySpaceSix emptySpaceSix emptySpaceSix emptySpaceSix playerSelDice playerSelDice playerSelDice playerSelDice playerSelDice'
-  'emptySpaceSeven emptySpaceSeven emptySpaceSeven emptySpaceSeven playerRollBtn playerRollBtn playerRollBtn emptySpaceEight emptySpaceEight playerMeter playerMeter'
-  'playerHP playerHp playerCup playerCup playerCup playerCup playerCup playerCup playerPowers playerPowers playerPowers'
-  'playerHP playerHp playerCup playerCup playerCup playerCup playerCup playerCup playerPowers playerPowers playerPowers';
-
+  grid-template-areas: 'oppPowers oppPowers oppPowers oppCup oppCup oppCup oppCup oppCup oppCup oppHPContainer oppHPContainer' 
+'oppPowers oppPowers oppPowers oppCup oppCup oppCup oppCup oppCup oppCup oppHPContainer oppHPContainer'
+'emptySpace emptySpace emptySpace emptySpace oppRollBtn oppRollBtn oppRollBtn emptySpaceTwo emptySpaceTwo oppMeter oppMeter'
+'oppSelDice oppSelDice oppSelDice oppSelDice emptySpaceThree emptySpaceThree emptySpaceThree emptySpaceThree emptySpaceThree oppCoin oppCoin' 
+/* 'emptySpaceFour emptySpaceFour emptySpaceFour emptySpaceFour emptySpaceFour emptySpaceFour emptySpaceFour emptySpaceFour emptySpaceFour emptySpaceFour emptySpaceFour' */
+'oppAttackRow oppAttackRow oppAttackRow oppAttackRow oppAttackRow oppAttackRow oppAttackRow oppAttackRow oppAttackRow oppAttackRow oppAttackRow' 
+'playerAttackRow playerAttackRow playerAttackRow playerAttackRow playerAttackRow playerAttackRow playerAttackRow playerAttackRow playerAttackRow playerAttackRow playerAttackRow'
+/* 'emptySpaceFive emptySpaceFive emptySpaceFive emptySpaceFive emptySpaceFive emptySpaceFive emptySpaceFive emptySpaceFive emptySpaceFive emptySpaceFive emptySpaceFive' */
+'playerCoin playerCoin emptySpaceSix emptySpaceSix emptySpaceSix emptySpaceSix emptySpaceSix playerSelDice playerSelDice playerSelDice playerSelDice'
+'playerMeter playerMeter emptySpaceSeven emptySpaceSeven playerRollBtn playerRollBtn playerRollBtn emptySpaceEight emptySpaceEight emptySpaceEight emptySpaceEight'
+'playerHP playerHP playerCup playerCup playerCup playerCup playerCup playerCup playerPowers playerPowers playerPowers'
+'playerHP playerHP playerCup playerCup playerCup playerCup playerCup playerCup playerPowers playerPowers playerPowers';
   padding: 10px;
   grid-gap: 1rem;
-	margin: 4rem auto; 
+  margin: 4rem auto;
   width: 50rem;
-	height: 38rem; 
-  background: white;
+  height: 38rem;
+  background: rgb(82, 196, 196);
   text-align: center;
-	border: 2px solid grey;
+  border: .5rem solid black;
 }
-
-/* .dice-game {
-  background-color: blue;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 40rem;
-  height: 40rem;
-  margin: 2rem;
-  align-content: center;
-} */
-
- /* .opponent-side{
-  background-color: rgb(192, 92, 79);
-  width: 100%;
-  height: 50%;
-} */
-
-
-/* .player-side{
-  background-color: rgb(116, 15, 65);
-  width: 100%;
-  height: 50%;
-  display: flex;
-  align-self: flex-end;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.health-points {
-  background-color: red;
-  align-self: flex-end;
-  width: 5rem;
-  height: 5rem;
-  margin-left: 4rem;
-}
-
-.cup {
-  background-color: green;
-  align-self: flex-end;
-  width: 15rem;
-  height: 5rem;
-  margin-left: 2rem;
-}
-
-.god-powers {
-  background-color: grey;
-  align-self: flex-end;
-  width: 10rem;
-  height: 5rem;
-  margin-left: 2rem;
-} */
-
-/* .gameboard {
-  display: grid;
-  background-color: red;
-  width: 90%;
-  height: 90%;
-} */
